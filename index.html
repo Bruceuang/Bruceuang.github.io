@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>友情链接</li>
+                        <li>友情鏈接</li>
                         
                         
-                        <li>关于我</li>
+                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -255,7 +255,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
   
@@ -278,7 +278,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/12/Hello-Hexo/">Hello Hexo!</a>
+      <a class="article-title" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a>
     </h1>
   
 
@@ -288,30 +288,45 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="A-First-level-header"><a href="#A-First-level-header" class="headerlink" title="A First level header"></a>A First level header</h1><h2 id="A-Second-level-header"><a href="#A-Second-level-header" class="headerlink" title="A Second level header"></a>A Second level header</h2><h3 id="the-different"><a href="#the-different" class="headerlink" title="the different"></a>the different</h3><pre><code>这样能输出中文了吗
-第三季
-</code></pre><ul>
-<li>the real note</li>
-</ul>
+        <h1 id="Markdown-语法"><a href="#Markdown-语法" class="headerlink" title="Markdown 语法"></a>Markdown 语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>几级标题就在前面就几个#号，一共6级。</p>
+<p>注：#号和标题之间需保留一个字符的空格。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>在文字前面加上*，-，或+号。</p>
+<p>具体显示上文字前面就有了一个小黑点如：</p>
 <ul>
-<li>the real note</li>
+<li><p>列表格式</p>
+<p>​</p>
+</li>
 </ul>
-<ul>
-<li>the real note</li>
-</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>在文本前就上数字+点：</p>
 <ol>
-<li>red</li>
-<li>blue</li>
-<li>black</li>
+<li><p>有序列表1</p>
+</li>
+<li><p>有序列表2</p>
+<p>​</p>
+</li>
 </ol>
-<h3 id="a-third-header"><a href="#a-third-header" class="headerlink" title="a third header"></a>a third header</h3><blockquote>
-<p>what about this</p>
+<h2 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h2><p>方法一：</p>
+<p>【文本】（链接）</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
+<p>方法二：</p>
+<p>【】【1】</p>
+<p>【1】：链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="noopener">google</a></p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>跟链接一样，在前面多一个！号</p>
+<p><img src="E:\hexo\blog\source\_posts\微信图片_20180310173054.jpg" alt=""></p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>“&gt;”加文本，注意中间有空格。</p>
+<blockquote>
+<p>引用，就是这一块框起来的。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>more info: <a href="https://mp.toutiao.com/profile_v2/articles/own" target="_blank" rel="noopener"> my hexo </a><br><a href="C:\Users\Administrator\Desktop\微信图片_20180310173054.jpg" target="_blank" rel="noopener">photo</a></p>
-<p>I strongly recommend against using any <code>&lt;blink&gt;</code> tags.</p>
-<p>I wish SmartyPants used named entities like <code>&amp;mdash;</code><br>instead of decimal-encoded entites like <code>haha</code>.</p>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">jinritbtc</a></p>
+<h2 id="代码引用"><a href="#代码引用" class="headerlink" title="代码引用"></a>代码引用</h2><p>用不跨行用一个·符号（Esc下面那个）括起来，跨行用三个，跟引用的效果差不多。</p>
+<p><code>不跨行</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">跨行</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<h2 id="加粗和斜体"><a href="#加粗和斜体" class="headerlink" title="加粗和斜体"></a>加粗和斜体</h2><p>两边各一个<em>括起来的是斜体，两边各两个</em>括起来的是加粗。</p>
+<p><em>斜体</em> </p>
+<p><strong>加粗</strong></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>用|分隔出来表格的样子</p>
+<p>如：1|2|3</p>
+<p>|1|2|3|<br>||||<br>||</p>
 <blockquote><br><p>For example.</p><br></blockquote>
 
 <p>​    </p>
@@ -415,14 +430,14 @@
                 2016-2018 John Doe
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -431,7 +446,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -464,9 +479,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
