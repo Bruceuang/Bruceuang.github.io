@@ -259,6 +259,59 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-python 中 translate 函数的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/26/python 中 translate 函数的使用/" class="article-date">
+      <time datetime="2018-05-26T06:14:34.804Z" itemprop="datePublished">2018-05-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="python-中-translate-函数的使用"><a href="#python-中-translate-函数的使用" class="headerlink" title="python 中 translate 函数的使用"></a>python 中 translate 函数的使用</h1><p>python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。</p>
+<h3 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos; </span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;xyz&apos;</span><br><span class="line">transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in 字符串替换为 out 字符串，同时删除del字符串，del参数可选。</span><br><span class="line">str = &apos;this is a test string xyz&apos;</span><br><span class="line">str.translate(transtab)    #执行结果为&apos;thIs Is A tEst strIng &apos;  注：执行结果不会保存在str中</span><br></pre></td></tr></table></figure>
+<h3 id="python2"><a href="#python2" class="headerlink" title="python2"></a>python2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line">transtab = string.maketrans(in, out)</span><br><span class="line">str.translate(transtab, del)       #python2 中删除指定字符串在translate() 函数中，同样del为可选参数。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>注：替换和删除是同时进行，当要删除的字符串中包含替换后的字符串out中的字符时，该字符将不会被删除。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos;</span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;AEIOU&apos;</span><br><span class="line">str = &apos;this is a test string&apos;</span><br><span class="line">str.translate(str.maketrans(in, out, del))</span><br><span class="line">#输出结果为 &apos;thIs Is A tEst strIng&apos;  将&apos;aeiou&apos; 替换后并未删除。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Hello-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -288,8 +341,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>description :”Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。</p>
+        <p>description: “Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。</p>
 <p>Markdown 以纯文本格式储存，在写作中加入少量标记符号即可实现排版。”</p>
+<hr>
 <h1 id="Markdown-语法"><a href="#Markdown-语法" class="headerlink" title="Markdown 语法"></a>Markdown 语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>几级标题就在前面就几个#号，一共6级。</p>
 <p>注：#号和标题之间需保留一个字符的空格。</p>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>在文字前面加上*，-，或+号。</p>
