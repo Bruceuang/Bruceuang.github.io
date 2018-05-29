@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。 python3123456in = &amp;apos;aeiou&amp;apos; out = &amp;apos;AEIOU&amp;apos;del = &amp;apos;xyz&amp;apos;transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in">
+<meta name="description" content="level5kyu 题目 Memoized Fibonacci 计算数较大的 Fibonacci 数列  我们都知道 Fibonacci 数列的递归计算方法： 1234def fibonacci(n):    if n in [0, 1]:        return n    return fibonacci(n - 1) + fibonacci(n - 2) 然而当 n 较大时，比如 n 超过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python 中 translate 函数的使用">
-<meta property="og:url" content="http://yoursite.com/2018/05/26/python 中 translate 函数的使用/index.html">
+<meta property="og:title" content="codewars 练习笔记 Memoized Fibonacci">
+<meta property="og:url" content="http://yoursite.com/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/index.html">
 <meta property="og:site_name" content="Blog for Hexo">
-<meta property="og:description" content="python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。 python3123456in = &amp;apos;aeiou&amp;apos; out = &amp;apos;AEIOU&amp;apos;del = &amp;apos;xyz&amp;apos;transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in">
-<meta property="og:updated_time" content="2018-05-26T06:39:27.383Z">
+<meta property="og:description" content="level5kyu 题目 Memoized Fibonacci 计算数较大的 Fibonacci 数列  我们都知道 Fibonacci 数列的递归计算方法： 1234def fibonacci(n):    if n in [0, 1]:        return n    return fibonacci(n - 1) + fibonacci(n - 2) 然而当 n 较大时，比如 n 超过">
+<meta property="og:updated_time" content="2018-05-29T00:33:49.527Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python 中 translate 函数的使用">
-<meta name="twitter:description" content="python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。 python3123456in = &amp;apos;aeiou&amp;apos; out = &amp;apos;AEIOU&amp;apos;del = &amp;apos;xyz&amp;apos;transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in">
+<meta name="twitter:title" content="codewars 练习笔记 Memoized Fibonacci">
+<meta name="twitter:description" content="level5kyu 题目 Memoized Fibonacci 计算数较大的 Fibonacci 数列  我们都知道 Fibonacci 数列的递归计算方法： 1234def fibonacci(n):    if n in [0, 1]:        return n    return fibonacci(n - 1) + fibonacci(n - 2) 然而当 n 较大时，比如 n 超过">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>python 中 translate 函数的使用 | Blog for Hexo</title>
+<title>codewars 练习笔记 Memoized Fibonacci | Blog for Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -256,11 +256,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-python 中 translate 函数的使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-codewars-练习笔记-Memoized-Fibonacci" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/05/26/python 中 translate 函数的使用/" class="article-date">
-      <time datetime="2018-05-26T06:14:34.804Z" itemprop="datePublished">2018-05-26</time>
+      <a href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/" class="article-date">
+      <time datetime="2018-05-29T00:34:16.370Z" itemprop="datePublished">2018-05-29</time>
 </a>
 
 
@@ -275,7 +275,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python 中 translate 函数的使用
+      codewars 练习笔记 Memoized Fibonacci
     </h1>
   
 
@@ -292,15 +292,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。</p>
-<h3 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos; </span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;xyz&apos;</span><br><span class="line">transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in 字符串替换为 out 字符串，同时删除del字符串，del参数可选。</span><br><span class="line">str = &apos;this is a test string xyz&apos;</span><br><span class="line">str.translate(transtab)    #执行结果为&apos;thIs Is A tEst strIng &apos;  注：执行结果不会保存在str中</span><br></pre></td></tr></table></figure>
-<h3 id="python2"><a href="#python2" class="headerlink" title="python2"></a>python2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line">transtab = string.maketrans(in, out)</span><br><span class="line">str.translate(transtab, del)       #python2 中删除指定字符串在translate() 函数中，同样del为可选参数。</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>注：替换和删除是同时进行，当要删除的字符串中包含替换后的字符串out中的字符时，该字符将不会被删除。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos;</span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;AEIOU&apos;</span><br><span class="line">str = &apos;this is a test string&apos;</span><br><span class="line">str.translate(str.maketrans(in, out, del))</span><br><span class="line">#输出结果为 &apos;thIs Is A tEst strIng&apos;  将&apos;aeiou&apos; 替换后并未删除。</span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>5kyu</p>
+<h3 id="题目-Memoized-Fibonacci"><a href="#题目-Memoized-Fibonacci" class="headerlink" title="题目 Memoized Fibonacci"></a>题目 Memoized Fibonacci</h3><ul>
+<li>计算数较大的 Fibonacci 数列</li>
 </ul>
+<p>我们都知道 Fibonacci 数列的递归计算方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>]:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">return</span> fibonacci(n - <span class="number">1</span>) + fibonacci(n - <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>然而当 n 较大时，比如 n 超过50，由于递归次数太多，计算的时间将会非常长。</p>
+<ul>
+<li>这道题目就要求改进计算 Fibonacci 的方法，使之能够在较短时间计算 n 超过50的情况。</li>
+</ul>
+<h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</span><br><span class="line">        i,j = j,i+j</span><br><span class="line">    <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -309,13 +311,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></p>
+        <p><span>本文标题:</span><a href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Bruce Huang</a></p>
-        <p><span>发布时间:</span>2018-05-26, 14:14:34</p>
-        <p><span>最后更新:</span>2018-05-26, 14:39:27</p>
+        <p><span>发布时间:</span>2018-05-29, 08:34:16</p>
+        <p><span>最后更新:</span>2018-05-29, 08:33:49</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/26/python 中 translate 函数的使用/" title="python 中 translate 函数的使用">http://yoursite.com/2018/05/26/python 中 translate 函数的使用/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/26/python 中 translate 函数的使用/　　作者: Bruce Huang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/" title="codewars 练习笔记 Memoized Fibonacci">http://yoursite.com/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/　　作者: Bruce Huang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -327,16 +329,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/05/28/codewars-练习笔记/">
-                    codewars 练习笔记
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/03/12/Hello-Hexo/">
-                    Markdown 笔记!
+                <a href="/2018/05/28/codewars-练习笔记/">
+                    codewars 练习笔记
                 </a>
             </div>
         
@@ -348,7 +344,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python3"><span class="toc-number">1.</span> <span class="toc-text">python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python2"><span class="toc-number">2.</span> <span class="toc-text">python2</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#level"><span class="toc-number">1.</span> <span class="toc-text">level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目-Memoized-Fibonacci"><span class="toc-number">2.</span> <span class="toc-text">题目 Memoized Fibonacci</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我的代码"><span class="toc-number">3.</span> <span class="toc-text">我的代码</span></a></li></ol>
         
     </div>
     <style>
@@ -384,7 +380,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"python 中 translate 函数的使用　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"codewars 练习笔记 Memoized Fibonacci　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -404,15 +400,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/05/28/codewars-练习笔记/" title="上一篇: codewars 练习笔记">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/03/12/Hello-Hexo/" title="下一篇: Markdown 笔记!">
+            <a href="/2018/05/28/codewars-练习笔记/" title="下一篇: codewars 练习笔记">
                 <i class="fa fa-angle-right"></i>
             </a>
         
