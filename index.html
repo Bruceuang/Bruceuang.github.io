@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>友情链接</li>
+                        <li>友情鏈接</li>
                         
                         
-                        <li>关于我</li>
+                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -255,9 +255,77 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-codewars-练习笔记-Pyramid-Slide-Down" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/" class="article-date">
+      <time datetime="2018-06-03T02:38:00.100Z" itemprop="datePublished">2018-06-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Pyramid-Slide-Down"><a href="#Pyramid-Slide-Down" class="headerlink" title="Pyramid Slide Down"></a>Pyramid Slide Down</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>4kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>假设你有一个由数字组成的平面金字塔，就像这里的这个金字塔：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   /3/</span><br><span class="line">  \7\ 4 </span><br><span class="line"> 2 \4\ 6 </span><br><span class="line">8 5 \9\ 3</span><br></pre></td></tr></table></figure>
+<p>假设“下滑”是从金字塔顶部到底部连续数字的总和。正如你所看到的，最长的“下滑”是3 + 7 + 4 + 9=23。</p>
+<p>你的任务是编写一个函数，它以金字塔为参数，并返回其“最长的”下滑。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">longestSlideDown([[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]])</span><br><span class="line"># =&gt; 23</span><br></pre></td></tr></table></figure>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先想到的是列举出所有可能的“下滑”情况，然后取最大值。而当金字塔很高时，这样的方法显然不可取。</p>
+<ul>
+<li>我们注意到，每次“下滑”都只能滑到下一行与之相邻的两个数，也就是说，第 i 行的第 j 个数只能滑向下一行的第 j 个数和第 j+1 个数。要使结果尽可能大的话，当然是选择滑向大的数。</li>
+<li>那么我们就可以让第 i 行的每一个数，加上下一行可滑向的最大的数，就将两行化简成一行，便可以从金字塔底层开始逐步将金字塔简化成一个数。例如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">     3                           3</span><br><span class="line">   7  4                  7                4 </span><br><span class="line"> 2  4  6     ——&gt;  2+max(8,5) 4+max(5,9) 6+max(9,3)</span><br><span class="line">8 5  9  3</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">longest_slide_down</span><span class="params">(pyramid)</span>:</span></span><br><span class="line">    last = pyramid.pop()  </span><br><span class="line">    <span class="keyword">while</span> pyramid:</span><br><span class="line">        tmp = pyramid.pop()</span><br><span class="line">        last = [tmp[i] + max(last[i],last[i+<span class="number">1</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tmp))]</span><br><span class="line">    <span class="keyword">return</span> last[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-codewars-练习笔记-Memoized-Fibonacci" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -655,14 +723,14 @@
                 2016-2018 Bruce Huang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -671,7 +739,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -704,9 +772,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
