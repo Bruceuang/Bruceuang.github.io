@@ -14,19 +14,16 @@
 <meta name="author" content="Bruce Huang" />
 
 
+    
+    
 
-<meta name="description" content="description: “Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。 Markdown 以纯文本格式储存，在写作中加入少量标记符号即可实现排版。”  Markdown 语法标题几级标题就在前面就几个#号，一共6级。 注：#号和标题之间需保留一个字符的空格。 列表在文字前面加上*，-，或+号。 具体显示上文字前面就有了一个小黑点如：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Markdown 笔记!">
-<meta property="og:url" content="http://yoursite.com/2018/03/12/Hello-Hexo/index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog for Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Blog for Hexo">
-<meta property="og:description" content="description: “Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。 Markdown 以纯文本格式储存，在写作中加入少量标记符号即可实现排版。”  Markdown 语法标题几级标题就在前面就几个#号，一共6级。 注：#号和标题之间需保留一个字符的空格。 列表在文字前面加上*，-，或+号。 具体显示上文字前面就有了一个小黑点如：">
-<meta property="og:image" content="e:/hexo/blog/source/_posts/微信图片_20180310173054.jpg">
-<meta property="og:updated_time" content="2018-03-23T06:27:34.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown 笔记!">
-<meta name="twitter:description" content="description: “Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。 Markdown 以纯文本格式储存，在写作中加入少量标记符号即可实现排版。”  Markdown 语法标题几级标题就在前面就几个#号，一共6级。 注：#号和标题之间需保留一个字符的空格。 列表在文字前面加上*，-，或+号。 具体显示上文字前面就有了一个小黑点如：">
-<meta name="twitter:image" content="e:/hexo/blog/source/_posts/微信图片_20180310173054.jpg">
+<meta name="twitter:title" content="Blog for Hexo">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,11 +51,13 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
+    <style> .article { opacity: 0;} </style>
+
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Markdown 笔记! | Blog for Hexo</title>
+<title>Blog for Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +66,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: false,
-        isPost: true,
+        isHome: true,
+        isPost: false,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -258,7 +257,73 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Hello-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-python 中 translate 函数的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/26/python 中 translate 函数的使用/" class="article-date">
+      <time datetime="2018-05-26T06:14:34.804Z" itemprop="datePublished">2018-05-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。</p>
+<h3 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos; </span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;xyz&apos;</span><br><span class="line">transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in 字符串替换为 out 字符串，同时删除del字符串，del参数可选。</span><br><span class="line">str = &apos;this is a test string xyz&apos;</span><br><span class="line">str.translate(transtab)    #执行结果为&apos;thIs Is A tEst strIng &apos;  注：执行结果不会保存在str中</span><br></pre></td></tr></table></figure>
+<h3 id="python2"><a href="#python2" class="headerlink" title="python2"></a>python2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line">transtab = string.maketrans(in, out)</span><br><span class="line">str.translate(transtab, del)       #python2 中删除指定字符串在translate() 函数中，同样del为可选参数。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>注：替换和删除是同时进行，当要删除的字符串中包含替换后的字符串out中的字符时，该字符将不会被删除。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos;</span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;AEIOU&apos;</span><br><span class="line">str = &apos;this is a test string&apos;</span><br><span class="line">str.translate(str.maketrans(in, out, del))</span><br><span class="line">#输出结果为 &apos;thIs Is A tEst strIng&apos;  将&apos;aeiou&apos; 替换后并未删除。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Hello-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/03/12/Hello-Hexo/" class="article-date">
@@ -276,19 +341,12 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Markdown 笔记!
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a>
     </h1>
   
 
       </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -357,127 +415,97 @@
       
     </div>
     
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Bruce Huang</a></p>
-        <p><span>发布时间:</span>2018-03-12, 12:15:17</p>
-        <p><span>最后更新:</span>2018-03-23, 14:27:34</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/03/12/Hello-Hexo/" title="Markdown 笔记!">http://yoursite.com/2018/03/12/Hello-Hexo/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/03/12/Hello-Hexo/　　作者: Bruce Huang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
     </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/05/26/python 中 translate 函数的使用/">
-                    python 中 translate 函数的使用
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/03/12/hello-world/">
-                    Hello World
-                </a>
-            </div>
-        
-    </nav>
-
+    
+  </div>
   
 </article>
 
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown-语法"><span class="toc-number">1.</span> <span class="toc-text">Markdown 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">1.1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">1.2.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有序列表"><span class="toc-number">1.3.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入链接"><span class="toc-number">1.4.</span> <span class="toc-text">插入链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入图片"><span class="toc-number">1.5.</span> <span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">1.6.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码引用"><span class="toc-number">1.7.</span> <span class="toc-text">代码引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加粗和斜体"><span class="toc-number">1.8.</span> <span class="toc-text">加粗和斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">1.9.</span> <span class="toc-text">表格</span></a></li></ol></li></ol>
-        
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/12/hello-world/" class="article-date">
+      <time datetime="2018-03-12T02:55:05.742Z" itemprop="datePublished">2018-03-12</time>
+</a>
+
+
     </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
+  
+  <div class="article-inner">
     
-<div class="share">
+      <input type="hidden" class="isFancy" />
     
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Markdown 笔记!　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
     
-
-    
-</div>
-
-
-
-
-
-
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
+      <header class="article-header">
         
-            <a href="/2018/05/26/python 中 translate 函数的使用/" title="上一篇: python 中 translate 函数的使用">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/12/hello-world/">Hello World</a>
+    </h1>
+  
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-        
-            <a href="/2018/03/12/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
+      
     </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Closest Sum/">Closest Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Simple Fun #384 Is Turing's Equation/">Simple Fun #384 Is Turing's Equation</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Beeramid/">Beeramid</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Which x for that sum/">Which x for that sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Count ones in a segment/">Count ones in a segment</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Single Word Pig Latin/">Single Word Pig Latin</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Logistic Regression API/">Logistic Regression API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/codewars-练习笔记/">codewars 练习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/hello-world/">Hello World</a></li></ul>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
 
 
 
 
-    <script>
-        
-    </script>
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
     <div class="outer">

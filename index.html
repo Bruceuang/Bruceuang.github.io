@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -255,9 +255,349 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Closest Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Closest Sum/" class="article-date">
+      <time datetime="2018-08-05T11:10:02.269Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Closest-Sum"><a href="#Closest-Sum" class="headerlink" title="Closest Sum"></a>Closest Sum</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>6kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>是给定数组里的三个数字之和最接近已知数字，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">closest_sum([<span class="number">-1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">-4</span>], <span class="number">1</span>) <span class="comment"># 2 (-1 + 2 + 1 = 2)</span></span><br></pre></td></tr></table></figure>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<li>使用 itertools.combinations() 计算数组里任意三个数的和 sum ；</li>
+<li>用 sum 减去 已知数 num；</li>
+<li>sum-num 的绝对值最小，就是最接近已知数的 sum。</li>
+</ul>
+<h3 id="优秀代码"><a href="#优秀代码" class="headerlink" title="优秀代码"></a>优秀代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">closest_sum</span><span class="params">(ints, num)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> sum(min(combinations(ints, <span class="number">3</span>), key=<span class="keyword">lambda</span> i: abs(num-sum(i))))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Simple Fun #384 Is Turing&#39;s Equation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Simple Fun #384 Is Turing's Equation/" class="article-date">
+      <time datetime="2018-08-05T11:09:51.240Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Simple-Fun-384-Is-Turing’s-Equation"><a href="#Simple-Fun-384-Is-Turing’s-Equation" class="headerlink" title="Simple Fun #384: Is Turing’s Equation?"></a>Simple Fun #384: Is Turing’s Equation?</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>7kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><ul>
+<li><p>将一个等式的每个数字倒转，判断结果是否正确（只出现加法）。</p>
+</li>
+<li><p>example：</p>
+<p><code>s = &quot;73+42=16&quot;</code> ，返回<code>true</code> 。</p>
+<p>因为将每个数字倒转得到的结果正确。</p>
+<ul>
+<li><p>73 -&gt; 37</p>
+<p>42 -&gt; 24</p>
+<p>16 -&gt; 61</p>
+<p>37+24==61</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_turing_equation</span><span class="params">(s)</span>:</span></span><br><span class="line">    Sum = s[::<span class="number">-1</span>].split(<span class="string">'='</span>)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">return</span> int(Sum) == sum(int(x) <span class="keyword">for</span> x <span class="keyword">in</span> s[::<span class="number">-1</span>].split(<span class="string">'='</span>)[<span class="number">1</span>].split(<span class="string">'+'</span>))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Beeramid" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Beeramid/" class="article-date">
+      <time datetime="2018-08-05T11:09:42.517Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Beeramid"><a href="#Beeramid" class="headerlink" title="Beeramid"></a>Beeramid</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>5kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><ul>
+<li>已知总钱数 bonus 和啤酒的单价 price。</li>
+<li>啤酒金字塔，第一层 1 瓶，第二次 4 瓶，第三层 9 瓶……</li>
+<li>求能够购买的啤酒的完整层数。</li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先用总钱数除以单价算出可以购买的啤酒瓶数，再循环累加计算层数。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">beeramid</span><span class="params">(bonus, price)</span>:</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    layer = <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> bonus/price&lt;<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> num &lt;= bonus//price:</span><br><span class="line">        layer += <span class="number">1</span></span><br><span class="line">        num += layer**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> layer<span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Which x for that sum" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Which x for that sum/" class="article-date">
+      <time datetime="2018-08-05T11:09:37.603Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Which-x-for-that-sum"><a href="#Which-x-for-that-sum" class="headerlink" title="Which x for that sum?"></a>Which x for that sum?</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>5kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>这是一道数学题，有函数 <code>U(n, x) = x + 2x**2 + 3x**3 + .. + nx**n</code> , 其中<code>(0 &lt; x &lt; 1)</code> ， 当 n 趋向于正无穷时，函数的极限为 m ；求解，当已知极限 m 时，x 的值为多少。</p>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples:"></a>Examples:</h4><p><code>solve(2.0) returns 0.5</code> ， 当 n 趋于无穷大时，极限 m == 2.0 ，返回 x 的值 0.5.</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>函数<code>U(n, x) = x + 2x**2 + 3x**3 + .. + nx**n</code> ，有无穷多项无法计算，我们要将其简化成一个能求解的式子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">U(n, x) = x + <span class="number">2</span>x**<span class="number">2</span> + <span class="number">3</span>x**<span class="number">3</span> + .. + nx**n               </span><br><span class="line">x*U(n, x) = x**<span class="number">2</span> + <span class="number">2</span>x**<span class="number">3</span> + <span class="number">3</span>x**<span class="number">4</span> + .. + nx**n+<span class="number">1</span></span><br><span class="line"><span class="comment"># 上面两个式子相减得：</span></span><br><span class="line">(<span class="number">1</span>-x)*U(n, x) = x + x**<span class="number">2</span> + x**<span class="number">3</span> + .. + x**n - nx**n+<span class="number">1</span></span><br><span class="line"><span class="comment"># 前 n 项是一个公比为 x 的等比数列，所以</span></span><br><span class="line">(<span class="number">1</span>-x)*U(n, x) = x *(<span class="number">1</span> - x**n)/(<span class="number">1</span>-x) - nx**n+<span class="number">1</span></span><br><span class="line">U(n, x) = x *(<span class="number">1</span> - x**n)/(<span class="number">1</span>-x)**<span class="number">2</span> - (nx**n+<span class="number">1</span>)/(<span class="number">1</span>-x)</span><br><span class="line"><span class="comment"># 又因为 (0 &lt; x &lt; 1)，当 n 趋于无穷大时，x**n == 0 , 所以最后得到极限</span></span><br><span class="line">m = x/(<span class="number">1</span>-x)**<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>这样，当已知 m 时，就能求出 x </p>
+<p>代码也非常简单</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solve</span><span class="params">(m)</span>:</span></span><br><span class="line">   <span class="keyword">return</span> ((<span class="number">2</span> + <span class="number">1</span>/m) - ((<span class="number">2</span> + <span class="number">1</span>/m)**<span class="number">2</span> - <span class="number">4</span>)**<span class="number">0.5</span>)/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Count ones in a segment" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Count ones in a segment/" class="article-date">
+      <time datetime="2018-08-05T11:09:29.008Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Count-ones-in-a-segment"><a href="#Count-ones-in-a-segment" class="headerlink" title="Count ones in a segment"></a>Count ones in a segment</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>4kyu</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><ul>
+<li><p>计算一个范围内二进制数一共有几个 ‘1’ ，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">给定范围 4 到 7 :</span><br><span class="line">4(dec) = 100(bin), 1 个 1 .</span><br><span class="line">5(dec) = 101(bin), 2 个 1 .</span><br><span class="line">6(dec) = 110(bin), 2 个 1.</span><br><span class="line">7(dec) = 111(bin), 3 个 1.</span><br><span class="line">所以一共 8 个 1，返回 8.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>题目看起来很简单，先把十进制数转为二进制，然后统计每个数有几个 ‘1’ ，全部加起来就行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countOnes</span><span class="params">(left, right)</span>:</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(left, right+<span class="number">1</span>):</span><br><span class="line">        num += str(bin(i)).count(<span class="string">'1'</span>)</span><br><span class="line">    <span class="keyword">return</span> num</span><br></pre></td></tr></table></figure>
+<ul>
+<li>但是，这种方法要遍历每一个数然后转成二进制，当数值较大的时候会运行超时，所以4kyu的题不会这么简单。</li>
+<li>我们可以发现这样一个规律，<ul>
+<li>2(dec) 前共有 2 个 ‘1’ </li>
+<li>4(dec) 前共有 4 个 ‘1’ </li>
+<li>8(dec) 前共有12 个 ‘1’</li>
+<li>2^n(dec) 前共有 n * 2^(n-1) 个 ‘1’</li>
+</ul>
+</li>
+<li>所以可以用递归算出从零到 n 一共多少个 ‘1’ </li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">is</span> <span class="number">0</span>: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    x = int(math.log(n, <span class="number">2</span>))</span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">2</span> ** (x - <span class="number">1</span>) + n - <span class="number">2</span> ** x + <span class="number">1</span> + count(n - <span class="number">2</span> ** x)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countOnes</span><span class="params">(left, right)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> count(right) - count(left - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Single Word Pig Latin" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/05/Single Word Pig Latin/" class="article-date">
+      <time datetime="2018-08-05T11:09:26.044Z" itemprop="datePublished">2018-08-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Single-Word-Pig-Latin"><a href="#Single-Word-Pig-Latin" class="headerlink" title="Single Word Pig Latin"></a>Single Word Pig Latin</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>6kyu</p>
+<h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><ul>
+<li>字符串如果以元音开头，返回原字符串 + ‘way’。</li>
+<li>以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。</li>
+<li>全部返回小写字母。</li>
+<li>如果有非字母符号，返回None。</li>
+<li>没有元音字母，返回原字符串 + ‘ay’。</li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<li>判断字符串是否为纯字母。</li>
+<li>将字符串转为小写。</li>
+<li>遍历字符串，找到元音字母，若在开头返回原串 + ‘way’；在中间，将之前的字母移到末尾 + ‘ay’；没找到，返回原串 + ‘ay’。</li>
+</ul>
+<h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pig_latin</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> s.isalpha()==<span class="keyword">False</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line">    s = s.lower()</span><br><span class="line">    <span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate(s):</span><br><span class="line">        <span class="keyword">if</span> v <span class="keyword">in</span> [<span class="string">'a'</span>,<span class="string">'e'</span>,<span class="string">'i'</span>,<span class="string">'o'</span>,<span class="string">'u'</span>]:</span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> s+<span class="string">'way'</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> s[i:] + s[:i] + <span class="string">'ay'</span></span><br><span class="line">    <span class="keyword">return</span> s+<span class="string">'ay'</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Logistic Regression API" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -551,248 +891,10 @@
 
 
   
-    <article id="post-python 中 translate 函数的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2018/05/26/python 中 translate 函数的使用/" class="article-date">
-      <time datetime="2018-05-26T06:14:34.804Z" itemprop="datePublished">2018-05-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>python 中 translate() 函数用时替换和删除字符串中指定元素，需要用 maketrans() 方法创建映射表。</p>
-<h3 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos; </span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;xyz&apos;</span><br><span class="line">transtab = str.maketrans(in,out,del)   #映射关系：将 str 中的 in 字符串替换为 out 字符串，同时删除del字符串，del参数可选。</span><br><span class="line">str = &apos;this is a test string xyz&apos;</span><br><span class="line">str.translate(transtab)    #执行结果为&apos;thIs Is A tEst strIng &apos;  注：执行结果不会保存在str中</span><br></pre></td></tr></table></figure>
-<h3 id="python2"><a href="#python2" class="headerlink" title="python2"></a>python2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line">transtab = string.maketrans(in, out)</span><br><span class="line">str.translate(transtab, del)       #python2 中删除指定字符串在translate() 函数中，同样del为可选参数。</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>注：替换和删除是同时进行，当要删除的字符串中包含替换后的字符串out中的字符时，该字符将不会被删除。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in = &apos;aeiou&apos;</span><br><span class="line">out = &apos;AEIOU&apos;</span><br><span class="line">del = &apos;AEIOU&apos;</span><br><span class="line">str = &apos;this is a test string&apos;</span><br><span class="line">str.translate(str.maketrans(in, out, del))</span><br><span class="line">#输出结果为 &apos;thIs Is A tEst strIng&apos;  将&apos;aeiou&apos; 替换后并未删除。</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Hello-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/03/12/Hello-Hexo/" class="article-date">
-      <time datetime="2018-03-12T04:15:17.000Z" itemprop="datePublished">2018-03-12</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>description: “Markdown 是一种轻量级的文本标记语言，由 John Gruber 创造，针对于网络写作的文本标记。</p>
-<p>Markdown 以纯文本格式储存，在写作中加入少量标记符号即可实现排版。”</p>
-<hr>
-<h1 id="Markdown-语法"><a href="#Markdown-语法" class="headerlink" title="Markdown 语法"></a>Markdown 语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>几级标题就在前面就几个#号，一共6级。</p>
-<p>注：#号和标题之间需保留一个字符的空格。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>在文字前面加上*，-，或+号。</p>
-<p>具体显示上文字前面就有了一个小黑点如：</p>
-<ul>
-<li><p>列表格式</p>
-<p>​</p>
-</li>
-</ul>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>在文本前就上数字+点：</p>
-<ol>
-<li><p>有序列表1</p>
-</li>
-<li><p>有序列表2</p>
-<p>​</p>
-</li>
-</ol>
-<h2 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h2><p>方法一：</p>
-<p>【文本】（链接）</p>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
-<p>方法二：</p>
-<p>【】【1】</p>
-<p>【1】：链接</p>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">google</a></p>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>跟链接一样，在前面多一个！号</p>
-<p><img src="E:\hexo\blog\source\_posts\微信图片_20180310173054.jpg" alt=""></p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>“&gt;”加文本，注意中间有空格。</p>
-<blockquote>
-<p>引用，就是这一块框起来的。</p>
-</blockquote>
-<h2 id="代码引用"><a href="#代码引用" class="headerlink" title="代码引用"></a>代码引用</h2><p>用不跨行用一个·符号（Esc下面那个）括起来，跨行用三个，跟引用的效果差不多。</p>
-<p><code>不跨行</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">跨行</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
-<h2 id="加粗和斜体"><a href="#加粗和斜体" class="headerlink" title="加粗和斜体"></a>加粗和斜体</h2><p>两边各一个<em>括起来的是斜体，两边各两个</em>括起来的是加粗。</p>
-<p><em>斜体</em> </p>
-<p><strong>加粗</strong></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>用|分隔出来表格的样子</p>
-<p>如：1|2|3</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>表格1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<blockquote><br><p>For example.</p><br></blockquote>
-
-<p>​    </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/03/12/hello-world/" class="article-date">
-      <time datetime="2018-03-12T02:55:05.742Z" itemprop="datePublished">2018-03-12</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
@@ -803,14 +905,14 @@
                 2016-2018 Bruce Huang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -819,7 +921,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -852,9 +954,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
