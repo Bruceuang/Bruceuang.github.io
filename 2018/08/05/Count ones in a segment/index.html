@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="Count ones in a segmentlevel4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.">
+<meta name="description" content="level4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.   解题思路题目看起来很简单，先把十进制数转">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog for Hexo">
+<meta property="og:title" content="codewars练习笔记 Count ones in a segment">
 <meta property="og:url" content="http://yoursite.com/2018/08/05/Count ones in a segment/index.html">
 <meta property="og:site_name" content="Blog for Hexo">
-<meta property="og:description" content="Count ones in a segmentlevel4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.">
-<meta property="og:updated_time" content="2018-08-05T11:09:19.709Z">
+<meta property="og:description" content="level4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.   解题思路题目看起来很简单，先把十进制数转">
+<meta property="og:updated_time" content="2018-08-05T11:30:08.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog for Hexo">
-<meta name="twitter:description" content="Count ones in a segmentlevel4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.">
+<meta name="twitter:title" content="codewars练习笔记 Count ones in a segment">
+<meta name="twitter:description" content="level4kyu 题目描述 计算一个范围内二进制数一共有几个 ‘1’ ，例如： 123456给定范围 4 到 7 :4(dec) = 100(bin), 1 个 1 .5(dec) = 101(bin), 2 个 1 .6(dec) = 110(bin), 2 个 1.7(dec) = 111(bin), 3 个 1.所以一共 8 个 1，返回 8.   解题思路题目看起来很简单，先把十进制数转">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Blog for Hexo</title>
+<title>codewars练习笔记 Count ones in a segment | Blog for Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,10 +271,28 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      codewars练习笔记 Count ones in a segment
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Count-ones-in-a-segment"><a href="#Count-ones-in-a-segment" class="headerlink" title="Count ones in a segment"></a>Count ones in a segment</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>4kyu</p>
+        <h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>4kyu</p>
 <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><ul>
 <li><p>计算一个范围内二进制数一共有几个 ‘1’ ，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">给定范围 4 到 7 :</span><br><span class="line">4(dec) = 100(bin), 1 个 1 .</span><br><span class="line">5(dec) = 101(bin), 2 个 1 .</span><br><span class="line">6(dec) = 110(bin), 2 个 1.</span><br><span class="line">7(dec) = 111(bin), 3 个 1.</span><br><span class="line">所以一共 8 个 1，返回 8.</span><br></pre></td></tr></table></figure>
@@ -302,12 +320,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/08/05/Count ones in a segment/"></a></p>
+        <p><span>本文标题:</span><a href="/2018/08/05/Count ones in a segment/">codewars练习笔记 Count ones in a segment</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Bruce Huang</a></p>
         <p><span>发布时间:</span>2018-08-05, 19:09:29</p>
-        <p><span>最后更新:</span>2018-08-05, 19:09:19</p>
+        <p><span>最后更新:</span>2018-08-05, 19:30:08</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/05/Count ones in a segment/" title="">http://yoursite.com/2018/08/05/Count ones in a segment/</a>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/05/Count ones in a segment/" title="codewars练习笔记 Count ones in a segment">http://yoursite.com/2018/08/05/Count ones in a segment/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/05/Count ones in a segment/　　作者: Bruce Huang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -329,7 +347,7 @@
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2018/08/05/Single Word Pig Latin/">
-                    
+                    codewars练习笔记 Single Word Pig Latin
                 </a>
             </div>
         
@@ -341,7 +359,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Count-ones-in-a-segment"><span class="toc-number">1.</span> <span class="toc-text">Count ones in a segment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#level"><span class="toc-number">1.0.1.</span> <span class="toc-text">level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.0.2.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路"><span class="toc-number">1.0.3.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.0.4.</span> <span class="toc-text">代码</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#level"><span class="toc-number">1.</span> <span class="toc-text">level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">2.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路"><span class="toc-number">3.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">4.</span> <span class="toc-text">代码</span></a></li></ol>
         
     </div>
     <style>
@@ -377,7 +395,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"codewars练习笔记 Count ones in a segment　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,13 +423,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/08/05/Single Word Pig Latin/" title="下一篇: ">
+            <a href="/2018/08/05/Single Word Pig Latin/" title="下一篇: codewars练习笔记 Single Word Pig Latin">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Closest Sum/">Closest Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Simple Fun #384 Is Turing's Equation/">Simple Fun #384 Is Turing's Equation</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Beeramid/">Beeramid</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Which x for that sum/">Which x for that sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Count ones in a segment/">Count ones in a segment</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Single Word Pig Latin/">Single Word Pig Latin</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Logistic Regression API/">Logistic Regression API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/codewars-练习笔记/">codewars 练习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Closest Sum/">codewars 练习笔记 Closest Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Simple Fun #384 Is Turing's Equation/">Simple Fun</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Beeramid/">codewars 练习笔记 Beeramid</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Which x for that sum/">Which x for that sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Count ones in a segment/">codewars练习笔记 Count ones in a segment</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Single Word Pig Latin/">codewars练习笔记 Single Word Pig Latin</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Logistic Regression API/">Logistic Regression API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/codewars-练习笔记/">codewars 练习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/hello-world/">Hello World</a></li></ul>
 
 
 

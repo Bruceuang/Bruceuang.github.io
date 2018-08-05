@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="Single Word Pig Latinlevel6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返">
+<meta name="description" content="level6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返回原串 + ‘way’；在中间，将之前的字">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog for Hexo">
+<meta property="og:title" content="codewars练习笔记 Single Word Pig Latin">
 <meta property="og:url" content="http://yoursite.com/2018/08/05/Single Word Pig Latin/index.html">
 <meta property="og:site_name" content="Blog for Hexo">
-<meta property="og:description" content="Single Word Pig Latinlevel6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返">
-<meta property="og:updated_time" content="2018-08-05T11:09:19.740Z">
+<meta property="og:description" content="level6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返回原串 + ‘way’；在中间，将之前的字">
+<meta property="og:updated_time" content="2018-08-05T11:30:08.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog for Hexo">
-<meta name="twitter:description" content="Single Word Pig Latinlevel6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返">
+<meta name="twitter:title" content="codewars练习笔记 Single Word Pig Latin">
+<meta name="twitter:description" content="level6kyu 题目要求 字符串如果以元音开头，返回原字符串 + ‘way’。 以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。 全部返回小写字母。 如果有非字母符号，返回None。 没有元音字母，返回原字符串 + ‘ay’。  解题思路 判断字符串是否为纯字母。 将字符串转为小写。 遍历字符串，找到元音字母，若在开头返回原串 + ‘way’；在中间，将之前的字">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Blog for Hexo</title>
+<title>codewars练习笔记 Single Word Pig Latin | Blog for Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,10 +271,28 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      codewars练习笔记 Single Word Pig Latin
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Single-Word-Pig-Latin"><a href="#Single-Word-Pig-Latin" class="headerlink" title="Single Word Pig Latin"></a>Single Word Pig Latin</h1><h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>6kyu</p>
+        <h3 id="level"><a href="#level" class="headerlink" title="level"></a>level</h3><p>6kyu</p>
 <h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><ul>
 <li>字符串如果以元音开头，返回原字符串 + ‘way’。</li>
 <li>以辅音字母开头，将字符串第一个元音字母之前的辅音字母移到末尾，并加上 ‘ay’。</li>
@@ -296,12 +314,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/08/05/Single Word Pig Latin/"></a></p>
+        <p><span>本文标题:</span><a href="/2018/08/05/Single Word Pig Latin/">codewars练习笔记 Single Word Pig Latin</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Bruce Huang</a></p>
         <p><span>发布时间:</span>2018-08-05, 19:09:26</p>
-        <p><span>最后更新:</span>2018-08-05, 19:09:19</p>
+        <p><span>最后更新:</span>2018-08-05, 19:30:08</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/05/Single Word Pig Latin/" title="">http://yoursite.com/2018/08/05/Single Word Pig Latin/</a>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/05/Single Word Pig Latin/" title="codewars练习笔记 Single Word Pig Latin">http://yoursite.com/2018/08/05/Single Word Pig Latin/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/05/Single Word Pig Latin/　　作者: Bruce Huang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -316,14 +334,14 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2018/08/05/Count ones in a segment/">
-                    
+                    codewars练习笔记 Count ones in a segment
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2018/08/05/Logistic Regression API/">
-                    
+                    Logistic Regression API
                 </a>
             </div>
         
@@ -335,7 +353,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-Word-Pig-Latin"><span class="toc-number">1.</span> <span class="toc-text">Single Word Pig Latin</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#level"><span class="toc-number">1.0.1.</span> <span class="toc-text">level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目要求"><span class="toc-number">1.0.2.</span> <span class="toc-text">题目要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路"><span class="toc-number">1.0.3.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我的代码"><span class="toc-number">1.0.4.</span> <span class="toc-text">我的代码</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#level"><span class="toc-number">1.</span> <span class="toc-text">level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目要求"><span class="toc-number">2.</span> <span class="toc-text">题目要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路"><span class="toc-number">3.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我的代码"><span class="toc-number">4.</span> <span class="toc-text">我的代码</span></a></li></ol>
         
     </div>
     <style>
@@ -371,7 +389,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"codewars练习笔记 Single Word Pig Latin　| Blog for Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -391,7 +409,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/08/05/Count ones in a segment/" title="上一篇: ">
+            <a href="/2018/08/05/Count ones in a segment/" title="上一篇: codewars练习笔记 Count ones in a segment">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -399,13 +417,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/08/05/Logistic Regression API/" title="下一篇: ">
+            <a href="/2018/08/05/Logistic Regression API/" title="下一篇: Logistic Regression API">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Closest Sum/">Closest Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Simple Fun #384 Is Turing's Equation/">Simple Fun #384 Is Turing's Equation</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Beeramid/">Beeramid</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Which x for that sum/">Which x for that sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Count ones in a segment/">Count ones in a segment</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Single Word Pig Latin/">Single Word Pig Latin</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Logistic Regression API/">Logistic Regression API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/codewars-练习笔记/">codewars 练习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Closest Sum/">codewars 练习笔记 Closest Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Simple Fun #384 Is Turing's Equation/">Simple Fun</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Beeramid/">codewars 练习笔记 Beeramid</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Which x for that sum/">Which x for that sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Count ones in a segment/">codewars练习笔记 Count ones in a segment</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Single Word Pig Latin/">codewars练习笔记 Single Word Pig Latin</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/Logistic Regression API/">Logistic Regression API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/codewars-练习笔记-Pyramid-Slide-Down/">codewars 练习笔记 Pyramid Slide Down</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/codewars-练习笔记-Memoized-Fibonacci/">codewars 练习笔记 Memoized Fibonacci</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/codewars-练习笔记/">codewars 练习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/26/python 中 translate 函数的使用/">python 中 translate 函数的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Hello-Hexo/">Markdown 笔记!</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/hello-world/">Hello World</a></li></ul>
 
 
 
